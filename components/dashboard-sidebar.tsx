@@ -115,7 +115,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                     : item.href
                                 }
                                 className={cn(
-                                  "flex items-center gap-3 rounded-md p-2 text-sm font-medium hover:bg-zinc",
+                                  "hover:bg-zinc flex items-center gap-3 rounded-md p-2 text-sm font-medium",
                                   path === item.href
                                     ? "bg-black text-white"
                                     : "text-muted-foreground hover:text-accent-foreground",
@@ -136,7 +136,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                 {item.hasDropdown && (
                                   <ChevronDown
                                     className={cn(
-                                      "ml-auto h-4 w-4 transition-transform duration-200",
+                                      "ml-auto size-4 transition-transform duration-200",
                                       openDropdowns[item.title] && "rotate-180"
                                     )}
                                   />
@@ -148,13 +148,13 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                     {/* Add dropdown items here */}
                                     <Link
                                       href="#"
-                                      className="block rounded-md p-2 text-sm text-muted-foreground hover:bg-zinc hover:text-accent-foreground"
+                                      className="hover:bg-zinc block rounded-md p-2 text-sm text-muted-foreground hover:text-accent-foreground"
                                     >
                                       Dropdown Item 1
                                     </Link>
                                     <Link
                                       href="#"
-                                      className="block rounded-md p-2 text-sm text-muted-foreground hover:bg-zinc hover:text-accent-foreground"
+                                      className="hover:bg-zinc block rounded-md p-2 text-sm text-muted-foreground hover:text-accent-foreground"
                                     >
                                       Dropdown Item 2
                                     </Link>
@@ -172,7 +172,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                         : item.href
                                     }
                                     className={cn(
-                                      "flex items-center gap-3 rounded-md p-2 text-sm font-medium hover:bg-zinc",
+                                      "hover:bg-zinc flex items-center gap-3 rounded-md p-2 text-sm font-medium",
                                       path === item.href
                                         ? "bg-black text-white"
                                         : "text-zinc-900 hover:text-accent-foreground",
@@ -190,18 +190,18 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                                   </Link>
                                   {item.hasDropdown &&
                                     openDropdowns[item.title] && (
-                                      <div className="absolute left-full ml-2 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                                      <div className="ring-opacity/5 absolute left-full ml-2 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black">
                                         <div className="py-1">
                                           {/* Add dropdown items here */}
                                           <Link
                                             href="#"
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-zinc"
+                                            className="hover:bg-zinc block px-4 py-2 text-sm text-gray-700"
                                           >
                                             Dropdown Item 1
                                           </Link>
                                           <Link
                                             href="#"
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-zinc"
+                                            className="hover:bg-zinc block px-4 py-2 text-sm text-gray-700"
                                           >
                                             Dropdown Item 2
                                           </Link>
@@ -295,7 +295,7 @@ export function MobileSheetSidebar({ links }: DashboardSidebarProps) {
                                   : item.href
                               }
                               className={cn(
-                                "flex items-center gap-3 rounded-md p-2 text-sm font-medium hover:bg-zinc",
+                                "hover:bg-zinc flex items-center gap-3 rounded-md p-2 text-sm font-medium",
                                 path === item.href
                                   ? "bg-black text-white"
                                   : "text-zinc-900 hover:text-accent-foreground",
@@ -313,7 +313,7 @@ export function MobileSheetSidebar({ links }: DashboardSidebarProps) {
                               {item.hasDropdown && (
                                 <ChevronDown
                                   className={cn(
-                                    "ml-auto h-4 w-4 transition-transform duration-200",
+                                    "ml-auto size-4 transition-transform duration-200",
                                     openDropdowns[item.title] && "rotate-180"
                                   )}
                                 />
@@ -324,13 +324,13 @@ export function MobileSheetSidebar({ links }: DashboardSidebarProps) {
                                 {/* Add dropdown items here */}
                                 <Link
                                   href="#"
-                                  className="block rounded-md p-2 text-sm text-muted-foreground hover:bg-zinc hover:text-accent-foreground"
+                                  className="hover:bg-zinc block rounded-md p-2 text-sm text-muted-foreground hover:text-accent-foreground"
                                 >
                                   Dropdown Item 1
                                 </Link>
                                 <Link
                                   href="#"
-                                  className="block rounded-md p-2 text-sm text-muted-foreground hover:bg-zinc hover:text-accent-foreground"
+                                  className="hover:bg-zinc block rounded-md p-2 text-sm text-muted-foreground hover:text-accent-foreground"
                                 >
                                   Dropdown Item 2
                                 </Link>

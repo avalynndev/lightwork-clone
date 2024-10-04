@@ -28,10 +28,10 @@ export default function FelicityActivity() {
   const [timeRange, setTimeRange] = useState("24 hours");
 
   return (
-    <main className="flex-1 overflow-x-hidden overflow-y-auto">
+    <main className="flex-1 overflow-y-auto overflow-x-hidden">
       <div className="container mx-auto px-6 py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-pretty text-gray-900">
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="font-pretty text-3xl text-gray-900">
             Felicity Activity
           </h2>
           <Select
@@ -48,7 +48,7 @@ export default function FelicityActivity() {
             </SelectContent>
           </Select>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
+        <div className="mb-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {metrics.map((item) => (
             <Card key={item.title} className="bg-white">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -63,7 +63,7 @@ export default function FelicityActivity() {
           ))}
         </div>
         <Tabs defaultValue="messages" className="mb-6">
-          <TabsList className="w-[400px] mb-4">
+          <TabsList className="mb-4 w-[400px]">
             <TabsTrigger value="messages" className="flex-1">
               Messages
             </TabsTrigger>
@@ -72,11 +72,11 @@ export default function FelicityActivity() {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="messages">
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap items-center gap-4">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
-                  <Input placeholder="Search..." className="pl-10 w-[300px]" />
+                  <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
+                  <Input placeholder="Search..." className="w-[300px] pl-10" />
                 </div>
                 <Select>
                   <SelectTrigger className="w-[180px] border-dashed">
@@ -85,7 +85,7 @@ export default function FelicityActivity() {
                         htmlFor="message-type"
                         className="flex items-center space-x-1"
                       >
-                        <Plus className="h-4 w-4" />
+                        <Plus className="size-4" />
                         <span>Status</span>
                       </Label>{" "}
                       <Separator orientation="vertical" />
@@ -127,9 +127,9 @@ export default function FelicityActivity() {
           </TabsContent>
         </Tabs>
 
-        <div className="flex items-center justify-between mt-6">
+        <div className="mt-6 flex items-center justify-between">
           <Button variant="outline" className="flex items-center gap-2">
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft className="size-4" />
             Previous
           </Button>
           <div className="flex items-center gap-2">
@@ -137,7 +137,7 @@ export default function FelicityActivity() {
               <Button
                 key={index}
                 variant={page === 1 ? "default" : "outline"}
-                className="w-10 h-10 p-0"
+                className="size-10 p-0"
               >
                 {page}
               </Button>
@@ -145,7 +145,7 @@ export default function FelicityActivity() {
           </div>
           <Button variant="outline" className="flex items-center gap-2">
             Next
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="size-4" />
           </Button>
         </div>
       </div>

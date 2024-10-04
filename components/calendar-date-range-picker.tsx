@@ -413,7 +413,7 @@ export const CalendarDateRangePicker = React.forwardRef<
               onClick={handleTogglePopover}
               suppressHydrationWarning
             >
-              <CalendarIcon className="mr-2 h-4 w-4" />
+              <CalendarIcon className="mr-2 size-4" />
               <span>
                 {date?.from ? (
                   date.to ? (
@@ -423,7 +423,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         className={cn(
                           "date-part",
                           highlightedPart === "firstDay" &&
-                            "underline font-bold"
+                            "font-bold underline"
                         )}
                         onMouseOver={() => handleMouseOver("firstDay")}
                         onMouseLeave={handleMouseLeave}
@@ -435,7 +435,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         className={cn(
                           "date-part",
                           highlightedPart === "firstMonth" &&
-                            "underline font-bold"
+                            "font-bold underline"
                         )}
                         onMouseOver={() => handleMouseOver("firstMonth")}
                         onMouseLeave={handleMouseLeave}
@@ -448,7 +448,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         className={cn(
                           "date-part",
                           highlightedPart === "firstYear" &&
-                            "underline font-bold"
+                            "font-bold underline"
                         )}
                         onMouseOver={() => handleMouseOver("firstYear")}
                         onMouseLeave={handleMouseLeave}
@@ -463,7 +463,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                             className={cn(
                               "date-part",
                               highlightedPart === "secondDay" &&
-                                "underline font-bold"
+                                "font-bold underline"
                             )}
                             onMouseOver={() => handleMouseOver("secondDay")}
                             onMouseLeave={handleMouseLeave}
@@ -475,7 +475,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                             className={cn(
                               "date-part",
                               highlightedPart === "secondMonth" &&
-                                "underline font-bold"
+                                "font-bold underline"
                             )}
                             onMouseOver={() => handleMouseOver("secondMonth")}
                             onMouseLeave={handleMouseLeave}
@@ -488,7 +488,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                             className={cn(
                               "date-part",
                               highlightedPart === "secondYear" &&
-                                "underline font-bold"
+                                "font-bold underline"
                             )}
                             onMouseOver={() => handleMouseOver("secondYear")}
                             onMouseLeave={handleMouseLeave}
@@ -504,7 +504,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         id="day"
                         className={cn(
                           "date-part",
-                          highlightedPart === "day" && "underline font-bold"
+                          highlightedPart === "day" && "font-bold underline"
                         )}
                         onMouseOver={() => handleMouseOver("day")}
                         onMouseLeave={handleMouseLeave}
@@ -515,7 +515,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         id="month"
                         className={cn(
                           "date-part",
-                          highlightedPart === "month" && "underline font-bold"
+                          highlightedPart === "month" && "font-bold underline"
                         )}
                         onMouseOver={() => handleMouseOver("month")}
                         onMouseLeave={handleMouseLeave}
@@ -527,7 +527,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         id="year"
                         className={cn(
                           "date-part",
-                          highlightedPart === "year" && "underline font-bold"
+                          highlightedPart === "year" && "font-bold underline"
                         )}
                         onMouseOver={() => handleMouseOver("year")}
                         onMouseLeave={handleMouseLeave}
@@ -556,7 +556,7 @@ export const CalendarDateRangePicker = React.forwardRef<
             >
               <div className="flex">
                 {numberOfMonths === 2 && (
-                  <div className="hidden md:flex flex-col gap-1 pr-4 text-left border-r border-foreground/10">
+                  <div className="hidden flex-col gap-1 border-r border-foreground/10 pr-4 text-left md:flex">
                     {dateRanges.map(({ label, start, end }) => (
                       <Button
                         key={label}
@@ -582,7 +582,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                 )}
                 <div className="flex flex-col">
                   <div className="flex items-center gap-4">
-                    <div className="flex gap-2 ml-3">
+                    <div className="ml-3 flex gap-2">
                       <Select
                         onValueChange={(value) => {
                           handleMonthChange(months.indexOf(value), "from");
@@ -592,7 +592,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                           monthFrom ? months[monthFrom.getMonth()] : undefined
                         }
                       >
-                        <SelectTrigger className="hidden sm:flex w-[122px] focus:ring-0 focus:ring-offset-0 font-medium hover:bg-accent hover:text-accent-foreground">
+                        <SelectTrigger className="hidden w-[122px] font-medium hover:bg-accent hover:text-accent-foreground focus:ring-0 focus:ring-offset-0 sm:flex">
                           <SelectValue placeholder="Month" />
                         </SelectTrigger>
                         <SelectContent>
@@ -610,7 +610,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                         }}
                         value={yearFrom ? yearFrom.toString() : undefined}
                       >
-                        <SelectTrigger className="hidden sm:flex w-[122px] focus:ring-0 focus:ring-offset-0 font-medium hover:bg-accent hover:text-accent-foreground">
+                        <SelectTrigger className="hidden w-[122px] font-medium hover:bg-accent hover:text-accent-foreground focus:ring-0 focus:ring-offset-0 sm:flex">
                           <SelectValue placeholder="Year" />
                         </SelectTrigger>
                         <SelectContent>
@@ -633,7 +633,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                             monthTo ? months[monthTo.getMonth()] : undefined
                           }
                         >
-                          <SelectTrigger className="hidden sm:flex w-[122px] focus:ring-0 focus:ring-offset-0 font-medium hover:bg-accent hover:text-accent-foreground">
+                          <SelectTrigger className="hidden w-[122px] font-medium hover:bg-accent hover:text-accent-foreground focus:ring-0 focus:ring-offset-0 sm:flex">
                             <SelectValue placeholder="Month" />
                           </SelectTrigger>
                           <SelectContent>
@@ -651,7 +651,7 @@ export const CalendarDateRangePicker = React.forwardRef<
                           }}
                           value={yearTo ? yearTo.toString() : undefined}
                         >
-                          <SelectTrigger className="hidden sm:flex w-[122px] focus:ring-0 focus:ring-offset-0 font-medium hover:bg-accent hover:text-accent-foreground">
+                          <SelectTrigger className="hidden w-[122px] font-medium hover:bg-accent hover:text-accent-foreground focus:ring-0 focus:ring-offset-0 sm:flex">
                             <SelectValue placeholder="Year" />
                           </SelectTrigger>
                           <SelectContent>
