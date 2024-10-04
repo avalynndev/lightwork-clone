@@ -48,7 +48,7 @@ export default function RootLayout({
             <header className="sticky top-0 z-50 flex h-14 px-4 backdrop-blur-sm lg:h-[60px] xl:px-8">
                 <MobileSheetSidebar links={filteredLinks} />
 
-                <div className="flex w-full justify-start items-center">
+                <div className="flex w-full items-center justify-start">
                   <SearchCommand links={filteredLinks} />
                 </div>
                 <div className="flex items-center space-x-3">
