@@ -42,38 +42,25 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} bg-background antialiased`}
       >
         <div className="relative flex min-h-screen w-full">
-          <div
-            className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat opacity-[0.13]"
-            style={{
-              backgroundImage: "url('/_static/background.jpg')",
-              backgroundAttachment: "fixed",
-            }}
-          />
           <DashboardSidebar links={filteredLinks} />
 
           <div className="flex flex-1 flex-col">
             <header className="sticky top-0 z-50 flex h-14 px-4 backdrop-blur-sm lg:h-[60px] xl:px-8">
-              <MaxWidthWrapper className="flex max-w-7xl items-center gap-x-3 px-0">
                 <MobileSheetSidebar links={filteredLinks} />
 
-                <div className="flex w-full justify-start">
+                <div className="flex w-full justify-start items-center">
                   <SearchCommand links={filteredLinks} />
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="rounded-full border">
                     <Mail className="size-9 p-2 text-gray-500" />
                   </div>
-                  <Bell className="size-9 rounded-full border p-2 text-gray-500" />
+                  <Bell className="size-9 rounded-full border p-2 text-gray-500" />{" "}
                   <UserAccountNav />
                 </div>
-              </MaxWidthWrapper>
             </header>
 
-            <main className="flex-1 p-4 xl:px-8">
-              <MaxWidthWrapper className="flex h-full max-w-7xl flex-col gap-4 px-0 lg:gap-6">
-                {children}
-              </MaxWidthWrapper>
-            </main>
+            <main className="flex-1 p-4 xl:px-8">{children}</main>
           </div>
         </div>
       </body>
