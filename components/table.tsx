@@ -165,13 +165,13 @@ export default function Component() {
               placeholder="Search..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-8 w-[300px]"
+              className="w-[300px] pl-8"
             />
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="border-dashed border rounded-lg shadow-sm h-10 flex items-center">
-                <div className="flex h-8 p-4 items-center space-x-1 text-sm">
+              <div className="flex h-10 items-center rounded-lg border border-dashed shadow-sm">
+                <div className="flex h-8 items-center space-x-1 p-4 text-sm">
                   <Label
                     htmlFor="message-type"
                     className="flex items-center space-x-1"
@@ -223,7 +223,7 @@ export default function Component() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">
-              <SlidersHorizontal className="mr-2 h-4 w-4" />
+              <SlidersHorizontal className="mr-2 size-4" />
               View
             </Button>
           </DropdownMenuTrigger>
@@ -240,7 +240,7 @@ export default function Component() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="rounded-lg p-1 overflow-hidden border border-gray-200 shadow-sm">
+      <div className="overflow-hidden rounded-lg border border-gray-200 p-1 shadow-sm">
         <Table>
           <TableHeader>
             <TableRow>
